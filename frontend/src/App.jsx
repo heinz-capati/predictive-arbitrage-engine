@@ -40,7 +40,7 @@ export default function App() {
   const [params, setParams] = useState(DEFAULT_NEWSVENDOR_PARAMS);
   const [showSchemaModal, setShowSchemaModal] = useState(false);
   // Controls split-personality UI: false -> Light Mode ("The Luxury Interior") | true -> Dark Mode ("Under the Hood")
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   // Synchronize isDarkMode strictly with the DOM's `dark` class on <html>
   useEffect(() => {
