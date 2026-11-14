@@ -1,0 +1,30 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "raw_signals",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "product_id", "order": "ASCENDING" },
+        { "fieldPath": "date", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "arbitrage_scores",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "product_id", "order": "ASCENDING" },
+        { "fieldPath": "date", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "arbitrage_scores",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "decision_status", "order": "ASCENDING" },
+        { "fieldPath": "action_threshold", "order": "DESCENDING" }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}
+
