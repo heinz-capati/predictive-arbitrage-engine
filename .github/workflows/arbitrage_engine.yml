@@ -33,7 +33,7 @@ jobs:
 
       - name: Run Arbitrage Pipeline
         env:
-          # Assuming your script looks for this env var for the credentials path
+          FIREBASE_SERVICE_ACCOUNT_PATH: backend/firebase_credentials.json
           GOOGLE_APPLICATION_CREDENTIALS: backend/firebase_credentials.json
         run: |
           python backend/pipeline_bridge.py --sync

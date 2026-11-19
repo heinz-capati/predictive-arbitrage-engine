@@ -78,7 +78,11 @@ class FirestoreArbitrageSync:
     """
 
     def __init__(self, service_account_path: Optional[str] = None) -> None:
-        raw_path = service_account_path or os.getenv("FIREBASE_SERVICE_ACCOUNT_PATH")
+        raw_path = (
+            service_account_path
+            or os.getenv("FIREBASE_SERVICE_ACCOUNT_PATH")
+            or os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
+        )
         if raw_path and not os.path.isabs(raw_path):
             resolved = (ROOT_DIR / raw_path).resolve()
             self.service_account_path = str(resolved) if resolved.exists() else raw_path
